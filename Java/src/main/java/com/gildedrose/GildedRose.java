@@ -4,7 +4,7 @@ import com.gildedrose.items.ItemUtils;
 
 class GildedRose {
     Item[] items;
-    private ItemUtils itemUtils;
+    private ItemUtils itemUtils = new ItemUtils();
 
     public GildedRose(Item[] items) {
         this.items = items;
