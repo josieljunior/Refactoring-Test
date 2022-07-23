@@ -1,7 +1,10 @@
 package com.gildedrose;
 
+import com.gildedrose.items.ItemUtils;
+
 class GildedRose {
     Item[] items;
+    private ItemUtils itemUtils;
 
     public GildedRose(Item[] items) {
         this.items = items;
@@ -17,7 +20,7 @@ class GildedRose {
                     }
                 }
             } else {
-                if (items[i].quality < 50) {
+                if (itemUtils.qualityIsValid(items[i])) {
                     items[i].quality = items[i].quality + 1;
 
                     if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
@@ -59,4 +62,6 @@ class GildedRose {
             }
         }
     }
+
+
 }
