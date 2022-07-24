@@ -5,7 +5,9 @@ import com.gildedrose.Item;
 public class ItemUtils {
 
     public static void reduceQuality(Item item){
-        item.quality -= 1;
+        if (item.quality > 0){
+            item.quality -= 1;
+        }
     }
 
     public static void increaseQuality(Item item){
@@ -17,7 +19,9 @@ public class ItemUtils {
     }
 
     public static void subtractQuality(Item item, int value){
-        item.quality -= value;
+        if (item.quality > 0){
+            item.quality -= value;
+        }
     }
 
     public static void reduceSellIn(Item item){

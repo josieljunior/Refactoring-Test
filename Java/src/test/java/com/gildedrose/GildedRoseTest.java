@@ -81,4 +81,31 @@ class GildedRoseTest {
         assertEquals(8, app.items[0].quality);
         assertEquals(9, app.items[0].sellIn);
     }
+    @Test
+    void itemDefault() {
+        Item[] items = new Item[] { new Item("teste",
+            10, 10) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(9, app.items[0].quality);
+        assertEquals(9, app.items[0].sellIn);
+    }
+    @Test
+    void itemDefaultWithSellInSmallerThan0() {
+        Item[] items = new Item[] { new Item("teste",
+            -5, 10) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(8, app.items[0].quality);
+        assertEquals(-6, app.items[0].sellIn);
+    }
+    @Test
+    void itemDefaultWithQuality0() {
+        Item[] items = new Item[] { new Item("teste",
+            5, 0) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(0, app.items[0].quality);
+        assertEquals(4, app.items[0].sellIn);
+    }
 }
