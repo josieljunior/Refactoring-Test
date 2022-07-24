@@ -81,6 +81,7 @@ class GildedRoseTest {
         assertEquals(8, app.items[0].quality);
         assertEquals(9, app.items[0].sellIn);
     }
+
     @Test
     void itemDefault() {
         Item[] items = new Item[] { new Item("teste",
@@ -90,6 +91,7 @@ class GildedRoseTest {
         assertEquals(9, app.items[0].quality);
         assertEquals(9, app.items[0].sellIn);
     }
+
     @Test
     void itemDefaultWithSellInSmallerThan0() {
         Item[] items = new Item[] { new Item("teste",
@@ -99,6 +101,7 @@ class GildedRoseTest {
         assertEquals(8, app.items[0].quality);
         assertEquals(-6, app.items[0].sellIn);
     }
+
     @Test
     void itemDefaultWithQuality0() {
         Item[] items = new Item[] { new Item("teste",

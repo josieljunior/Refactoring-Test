@@ -3,7 +3,6 @@ package com.gildedrose;
 import com.gildedrose.items.AgedBrie;
 import com.gildedrose.items.BackstagePasses;
 import com.gildedrose.items.Conjured;
-import com.gildedrose.items.ItemUtils;
 
 class GildedRose {
     Item[] items;
