@@ -4,5 +4,7 @@ import com.gildedrose.Item;
 
 public interface ItemType {
 
-    void updateQuality(Item item);
+    static void updateQuality(Item item) {
+
+    }
 }

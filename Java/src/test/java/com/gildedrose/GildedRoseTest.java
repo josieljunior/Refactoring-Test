@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class GildedRoseTest {
 
     @Test
-    void desceaseQualityAgedBrie() {
+    void reduceQualityAgedBrie() {
         Item[] items = new Item[] { new Item("Aged Brie", 10, 0) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
@@ -69,7 +69,7 @@ class GildedRoseTest {
             0, 80) };
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        assertEquals(app.items[0].quality, app.items[0].quality);
-        assertEquals(app.items[0].sellIn, app.items[0].sellIn);
+        assertEquals(80, app.items[0].quality);
+        assertEquals(0, app.items[0].sellIn);
     }
 }
