@@ -24,7 +24,6 @@ class GildedRoseTest {
         assertEquals(9, app.items[0].sellIn);
     }
 
-
     @Test
     void backstagePassesWithSellInLessOrEqual10() {
         Item[] items = new Item[] { new Item("Backstage passes to a TAFKAL80ETC concert",
@@ -71,5 +70,15 @@ class GildedRoseTest {
         app.updateQuality();
         assertEquals(80, app.items[0].quality);
         assertEquals(0, app.items[0].sellIn);
+    }
+
+    @Test
+    void conjured() {
+        Item[] items = new Item[] { new Item("Conjured Mana Cake",
+            10, 10) };
+        GildedRose app = new GildedRose(items);
+        app.updateQuality();
+        assertEquals(8, app.items[0].quality);
+        assertEquals(9, app.items[0].sellIn);
     }
 }

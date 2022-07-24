@@ -2,6 +2,7 @@ package com.gildedrose;
 
 import com.gildedrose.items.AgedBrie;
 import com.gildedrose.items.BackstagePasses;
+import com.gildedrose.items.Conjured;
 import com.gildedrose.items.ItemUtils;
 
 class GildedRose {
@@ -20,6 +21,13 @@ class GildedRose {
 
                 case "Backstage passes to a TAFKAL80ETC concert":
                     BackstagePasses.updateQuality(items[i]);
+                    break;
+
+                case "Sulfuras, Hand of Ragnaros":
+                    break;
+
+                case "Conjured Mana Cake":
+                    Conjured.updateQuality(items[i]);
                     break;
 
                 default:

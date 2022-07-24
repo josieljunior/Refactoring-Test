@@ -16,6 +16,10 @@ public class ItemUtils {
         item.quality += value;
     }
 
+    public static void subtractQuality(Item item, int value){
+        item.quality -= value;
+    }
+
     public static void reduceSellIn(Item item){
         item.sellIn -= 1;
     }
