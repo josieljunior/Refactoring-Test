@@ -6,7 +6,7 @@ import com.gildedrose.ItemUtils;
 
 public class BackstagePasses implements ItemType {
 
-    public static void updateQuality(Item item) {
+    public void updateQuality(Item item) {
         if (ItemUtils.qualityIsValid(item)){
             if (item.sellIn <= 5){
                 ItemUtils.sumQuality(item, 3);

@@ -6,7 +6,7 @@ import com.gildedrose.ItemUtils;
 
 public class AgedBrie implements ItemType {
 
-    public static void updateQuality(Item item) {
+    public void updateQuality(Item item) {
         if (ItemUtils.qualityIsValid(item)){
             ItemUtils.increaseQuality(item);
         }

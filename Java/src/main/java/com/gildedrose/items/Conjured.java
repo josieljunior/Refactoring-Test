@@ -6,7 +6,7 @@ import com.gildedrose.ItemUtils;
 
 public class Conjured implements ItemType {
 
-    public static void updateQuality(Item item) {
+    public void updateQuality(Item item) {
         if (ItemUtils.qualityIsValid(item)){
             ItemUtils.subtractQuality(item, 2);
         }
