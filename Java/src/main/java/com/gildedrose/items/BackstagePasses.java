@@ -6,6 +6,7 @@ import com.gildedrose.ItemUtils;
 
 public class BackstagePasses implements ItemType {
 
+    @Override
     public void updateQuality(Item item) {
         if (ItemUtils.qualityIsValid(item)){
             if (item.sellIn <= 5){

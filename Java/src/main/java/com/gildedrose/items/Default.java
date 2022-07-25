@@ -4,13 +4,16 @@ import com.gildedrose.Item;
 import com.gildedrose.ItemType;
 import com.gildedrose.ItemUtils;
 
-public class Conjured implements ItemType {
+public class Default implements ItemType {
 
     @Override
     public void updateQuality(Item item) {
-        if (ItemUtils.qualityIsValid(item)){
-            ItemUtils.subtractQuality(item, 2);
-        }
         ItemUtils.reduceSellIn(item);
+
+        if (item.sellIn < 0) {
+            ItemUtils.subtractQuality(item, 2);
+        } else {
+            ItemUtils.reduceQuality(item);
+        }
     }
 }
